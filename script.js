@@ -11,19 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = item.querySelector('img');
       const title = item.querySelector('.gallery-title').innerText;
 
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
-      caption.innerText = title;
+      // Only open lightbox if it's a standard image card (ignores video items)
+      if (img) {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        caption.innerText = title;
+      }
     });
   });
 
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
       lightbox.style.display = 'none';
-    }
-  });
+    });
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  }
 });
