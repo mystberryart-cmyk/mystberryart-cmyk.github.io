@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mystberry | Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="assets/images/logo.png" alt="Mystberry Logo" class="logo-img">
+      <span class="logo-text">Mystberry</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="animation.html" class="active">Animation</a>
+      <a href="#">Shop</a>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
+      <a href="#" class="cart-link">🛒 0</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner" style="min-height: 40vh;">
+    <div class="hero-box">
+      <h1>Motion & Dynamic Worlds</h1>
+      <p>Bringing illustrations and dreamy concepts to life through looping animations.</p>
+    </div>
+  </section>
+
+  <main id="gallery" class="gallery-container">
+    
+    <div class="gallery-item">
+      <div class="img-wrap" style="background: #000;">
+        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+          <source src="assets/videos/forgotten-garden.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <span class="gallery-title">Forgotten Garden Loop</span>
+    </div>
+
+    <div class="gallery-item">
+      <div class="img-wrap" style="background: #000;">
+        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+          <source src="assets/videos/mermaid.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <span class="gallery-title">Mermaid Animation</span>
+    </div>
+
+    </main>
+
+  <footer>
+    <p>&copy; 2026 Mystberry. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
